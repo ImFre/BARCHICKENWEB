@@ -6,226 +6,79 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-        <title>JSP Page</title>
+        <title>JSP Principal</title>
 
-        <style>
-
-            body{
-                background-image: url(imgs/imagen.png);
-
-
-
-            }
-
-        </style>
-
-        <script>
-
-
-
-
-
-        </script>
-
-
-
-        <script src="https://www.google.com/recaptcha/api.js"></script>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <meta name="google-signin-scope" content="profile email">
-        <meta name="google-signin-client_id" content="901092594047-2ks1ppeq4opdvpc9h3eq0980ins7vb47.apps.googleusercontent.com">
-
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
 
         <script src="js/fontawesome.all.min.js" type="text/javascript"></script>
 
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
-        <link href="css/adminlte.min.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body class="login-page" style="min-height: 466px">
+    <body>
 
-        <!--.login-box -->
-        <div class="login-box">
 
-            <!-- .cardlogin-logo -->
-            <div class="card card-outline card-primary">
+        <%@include file="fragments/fragment_navbar.jsp" %>
 
-                <!-- .HEADER -->
-                <div class="card-header text-center">
+        <div class="container text-center">
 
-                    <a class="h1">
-                        <b>Polleria</b>
-                        SHETING
+            <div>
 
-                    </a>  
-
-                </div>
-                <!-- /.HEADER -->
-
-
-
-                <!-- .card-body -->
-                <div class="card-body">
-
-                    <!-- .Form -->
-
-                    <form action="srvUsuario?accion=verificar"  onsubmit="return miFuncion(this)" method="POST" class="mt-3" >
-                        <!--    <input type="hidden" name="accion" value="verificar" /> -->
-
-                        <div class="input-group mb-3"> 
-
-                            <input type="text" name="txtUsu" maxlength="23" class="form-control" placeholder="UserName">
-
-                            <div class="input-group-append">
-
-                                <div class="input-group-text">
-                                    <span class="fas fa-envelope">
-
-
-
-                                    </span>
-
-
-                                </div>
-
-
-                            </div>
-
-
-                        </div>
-                        <div class="input-group mb-3"> 
-
-                            <input type="password" name="txtPass" maxlength="9" class="form-control" placeholder="Password">
-
-                            <div class="input-group-append">
-
-                                <div class="input-group-text">
-                                    <span class="fas fa-lock">
-
-
-
-                                    </span>
-
-
-                                </div>
-
-
-                            </div>
-
-
-                        </div>
-
-                        <div class="row">
-
-                            <div class="col-12">
-
-                                <!--<div class="icheck-primary">
-                                    <input type="checkbox" id="remenber">
-                                    <label for="remenber">
-                                    
-                                        "Recuerdame Contraseña"
-
-                                    </label>
-
-
-                                </div> -->
-
-                                <div class="g-recaptcha"  data-theme="white" data-sitekey="6Le8rc0UAAAAAFf7UUabjFs7uwCPs8GuVoUePpsy" data-callback="enabledSubmit"></div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-8 mr-5 ml-5 mt-3">
-
-
-
-
-                            <button type="submit" name="verificar"  value="Verificar" class="btn btn-primary btn-block">Ingresar</button>
-
-
-                        </div>
-                    </form>
-
-                    <!-- .Form -->
-
-                    <!-- .social-auth-links -->
-
-
-                    <!--  <div class="g-signin2" data-onsuccess="onSignIn" >
-                      </div>-->
-
-                    <div class="social-auth-links text-center mt-2 mb-2">
-
-
-                        <a href="#" class="btn btn-block btn-danger">
-                            <i class="fas fa-info"></i> Mensaje:
-                            ${msje}
-                        </a>
-
-                        <p class="mb-1">
-                            <a href="forgot-password.html">Olvidé mi contraseña...</a>
-                        </p>
-
-
-
-
-
-                    </div>
-                    <!-- /.card-body -->
-                </div>
-                <!-- /. cardlogin-logo -->
+                <h1>Bienvenido a la aplicacion de Lubricenter</h1>
 
 
             </div>
-            <!-- /.login-box -->
+
+            <!-- Carrousel -->
+            <div id="carouselExampleIndicators" class="carousel slide"
+                 data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0"
+                        class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="imgs/plate1.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="imgs/plate2.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="imgs/plate3.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators"
+                   role="button" data-slide="prev"> <span
+                        class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+                        class="sr-only">Previous</span>
+                </a> <a class="carousel-control-next" href="#carouselExampleIndicators"
+                        role="button" data-slide="next"> <span
+                        class="carousel-control-next-icon" aria-hidden="true"></span> <span
+                        class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+    <!-- Footer -->
+        <div >
+
+            <footer class="py-5 bg-dark">
+                <div class="container">
+                    <p class="m-0 text-center text-white">Copyright &copy; Java
+                        BarChickenSheting 2022</p>
+                </div>
+                <!-- /.container -->
+            </footer>
 
 
+        </div>
 
+        <script src="js/jquery.min.js" type="text/javascript"></script>
 
+        <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
 
-
-            <script src="js/jquery.min.js" type="text/javascript"></script>
-
-            <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
-
-            <script src="js/adminlte.min.js" type="text/javascript"></script>
-
-            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-
-            <script>
-
-            function miFuncion(a) {
-
-                var response = grecaptcha.getResponse();
-
-                if (response.length == 0) {
-
-                    Swal.fire({
-
-                        title: 'Captcha no verificado!',
-                        icon: 'warning',
-                        confirmButtonText: 'Volver',
-                        footer: '<span class="Red">¿Acaso Eres un robot?</span>',
-                        width: '35%',
-                        allowOutsideClick: false,
-                        allowEscapeKey: false,
-                        allowEnterKey: false,
-                        stopkeydownPropagation: false
-                    });
-
-                    return false;
-                    event.preventDefault();
-                } else {
-
-                    return true;
-                }
-            }
-
-
-            </script>
+        <script src="js/adminlte.min.js" type="text/javascript"></script>
 
     </body>
 </html>
